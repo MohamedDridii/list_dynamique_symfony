@@ -9,12 +9,14 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/LENOVO/Desktop/Projets_symfony/list_dynamique_symfony/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/LENOVO/Desktop/Projets_symfony/list_dynamique_symfony/templates/home/index.html.twig</code></li>
-    </ul>
+   <div class="row">
+        <div class="col-6 mx_auto" >
+            {{form_start(form)}}
+                    {{form_widget(form )}}
+                    <button type="submit" class="btn btn-primary w-100"> send </button>
+                    
+            {{form_end(form)}}
+        </div>
+   </div>
 </div>
 {% endblock %}
