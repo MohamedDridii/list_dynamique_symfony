@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}form{% endblock %}
 
 {% block body %}
 <style>
@@ -8,15 +8,19 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
+    
    <div class="row">
-        <div class="col-6 mx_auto" >
-            {{form_start(form)}}
-                    {{form_widget(form )}}
-                    <button type="submit" class="btn btn-primary w-100"> send </button>
+        <div class="col-6 mx-auto" >
+            <h1 class="display-4 my-5 text-center">Title </h1>
+            {{form_start(form)}}            
+            {{form_row(form.name )}}
+            {{form_row(form.country )}}
+            {{form_row(form.city )}}
+            {{form_row(form.message )}}
+            <button type="submit" class="btn btn-primary w-100" formnovalidate> send </button>
                     
             {{form_end(form)}}
         </div>
    </div>
-</div>
+
 {% endblock %}
